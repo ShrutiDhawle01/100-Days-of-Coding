@@ -1,0 +1,10 @@
+#Average Salary Excluding the Minimum and Maximum Salary
+
+class Solution:
+    def average(self, salary: List[int]) -> float:
+        max_sal = max(salary)
+        min_sal = min(salary)
+        sal_sum = sum(salary) - (max_sal+min_sal)
+        avg = sal_sum/(len(salary)-2)
+        return avg
+        
